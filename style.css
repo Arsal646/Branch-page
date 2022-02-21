@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  width: 100%;
+  max-width: 100%;
+
+}
+::selection{
+  background: #6d50e2;
+  color: #fff;
+}
+.container{
+  
+  width: 100%;
+  padding: 40px 50px  40px  40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 130px;
+ 
+}
+.container .topic{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.content{
+  display: flex;
+ 
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.content .list{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-right: 50px;
+  position: relative;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.content .list label{
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: #333;
+  z-index: 12;
+}
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about{
+  color: black;
+}
+.content .list label:hover{
+  color: #0c0524;
+}
+.content .slider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  color: #333;
+  transition: all 0.4s ease;
+}
+#home:checked ~ .list .slider{
+  top: 0;
+}
+#blog:checked ~ .list .slider{
+  top: 60px;
+}
+#help:checked ~ .list .slider{
+  top: 120px;
+}
+#code:checked ~ .list .slider{
+  top: 180px;
+}
+#about:checked ~ .list .slider{
+  top: 240px;
+}
+.content .text-content{
+  width: 70%;
+  height: 100%;
+}
+.content .text{
+  display: none;
+}
+.content .text .title{
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.content .text p{
+  text-align: justify;
+}
+.content .text-content .home{
+  display: block;
+}
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about,
+#KSA:checked ~ .text-content .KSA{
+  display: block;
+}
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home,
+#KSA:checked ~ .text-content .home{
+  display: none;
+}
+.content input{
+  display: none;
+}
+.direction_btn{
+  text-decoration: none;
+  color: white;
+  background-color: #11053B;
+  width: 100%;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.daily_time_detail{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #EBEBEB;
+  border-top: 1px solid #EBEBEB;
+ 
+  padding: 10px 0;
+}
+
+@media(max-width:800px){
+  .container{
+    padding: 20px;
+  }
+}
+@media(max-width:1360px){
+  .container{
+    padding: 20px;
+  }
+}
+@media(max-width:1100px){
+  .content {
+    flex-direction: column;
+}
+.content .list {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.text-content{
+  text-align: center;
+  position: relative;
+  top:0;
+  left: 50%;
+  transform: translate(-50%);
+
+}
+.content .text-content {
+
+  width: 100%;
+}
+}
